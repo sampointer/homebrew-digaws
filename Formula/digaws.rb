@@ -2,16 +2,16 @@
 class Digaws < Formula
   desc "Look up region and other information for any AWS IP address"
   homepage "https://github.com/sampointer/digaws"
-  version "0.1.0"
+  version "0.1.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/sampointer/digaws/releases/download/v0.1.0/digaws_0.1.0_Darwin_x86_64.tar.gz"
-    sha256 "ae54c19bc7cd92f7622bb194f81b18907709e958c617b631f14d96dd85a81b7c"
+    url "https://github.com/sampointer/digaws/releases/download/v0.1.1/digaws_0.1.1_Darwin_x86_64.tar.gz"
+    sha256 "5181ba480630d2ad81076c682a2dea2fba755ea3199caf67090591dbf23398d9"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/sampointer/digaws/releases/download/v0.1.0/digaws_0.1.0_Linux_x86_64.tar.gz"
-    sha256 "3b9f061df85abf130c1eadc61fab204aa41edad311ae842a70b9af81931abecb"
+    url "https://github.com/sampointer/digaws/releases/download/v0.1.1/digaws_0.1.1_Linux_x86_64.tar.gz"
+    sha256 "423351d4c2a12cc5982d69357625bec4a4493e8aaae04517b8b8ef45ee16a1c7"
   end
 
   def install
