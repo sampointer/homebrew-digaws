@@ -5,24 +5,24 @@
 class Digaws < Formula
   desc "Look up region and other information for any AWS IP address"
   homepage "https://github.com/sampointer/digaws"
-  version "0.3.4"
+  version "1.0.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sampointer/digaws/releases/download/v0.3.4/digaws_0.3.4_Darwin_x86_64.tar.gz"
-      sha256 "f322923f90723adf5b6bcc5e9222898f37743f9c5af59c6855a0453fe8a4800c"
+      url "https://github.com/sampointer/digaws/releases/download/v1.0.0/digaws_1.0.0_Darwin_x86_64.tar.gz"
+      sha256 "6f958a2315c63080fb371144dea9c100abf776600e342a36f93421f5f8e58a86"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sampointer/digaws/releases/download/v0.3.4/digaws_0.3.4_Linux_x86_64.tar.gz"
-      sha256 "a1b162a7fbcb51b454d32ca969cc9464f1b5a763c019a2d0d2d285e7c521bc95"
+      url "https://github.com/sampointer/digaws/releases/download/v1.0.0/digaws_1.0.0_Linux_x86_64.tar.gz"
+      sha256 "0751420d30b6159cc3c02bbf373f245029a1e765256969c715f24d1ea937d2ed"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sampointer/digaws/releases/download/v0.3.4/digaws_0.3.4_Linux_arm64.tar.gz"
-      sha256 "48c69e993ede30618e9a92c54005473e0e18296b4a370af45991969813e14c2e"
+      url "https://github.com/sampointer/digaws/releases/download/v1.0.0/digaws_1.0.0_Linux_arm64.tar.gz"
+      sha256 "a2321e68adbe4556cc4fe9ef107028ffb6e437e65247a35d57b5b7185570d62e"
     end
   end
 
