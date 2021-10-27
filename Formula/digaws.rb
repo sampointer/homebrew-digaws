@@ -5,32 +5,43 @@
 class Digaws < Formula
   desc "Look up region and other information for any AWS IP address"
   homepage "https://github.com/sampointer/digaws"
-  version "1.0.2"
-  bottle :unneeded
+  version "1.0.3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/sampointer/digaws/releases/download/v1.0.2/digaws_1.0.2_Darwin_arm64.tar.gz"
-      sha256 "14014331f105cb390f2f38c0684133aa2a2e36e003a46e075a12e1081191e642"
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/sampointer/digaws/releases/download/v1.0.2/digaws_1.0.2_Darwin_x86_64.tar.gz"
-      sha256 "5f788c2e641478b4442a79a7036c645af1b83f8036696a501ffcb99bcbf24fde"
+      url "https://github.com/sampointer/digaws/releases/download/v1.0.3/digaws_1.0.3_Darwin_x86_64.tar.gz"
+      sha256 "11eb4b2bc53376e039903f7e71fa442c41ba8e069e0fa0976a865e4d60cf530b"
+
+      def install
+        bin.install "digaws"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/sampointer/digaws/releases/download/v1.0.3/digaws_1.0.3_Darwin_arm64.tar.gz"
+      sha256 "c38fb6be33a9105a398800924e821e77d708812d545b1062f90396f174c52b9b"
+
+      def install
+        bin.install "digaws"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sampointer/digaws/releases/download/v1.0.2/digaws_1.0.2_Linux_x86_64.tar.gz"
-      sha256 "bdb5c50841dcd3e8dd1754812ddc2e89cd337707d7fda1a1ddbf4136bb43f74f"
+      url "https://github.com/sampointer/digaws/releases/download/v1.0.3/digaws_1.0.3_Linux_x86_64.tar.gz"
+      sha256 "bb7b3186919638d2d180e0a1984862c391083b8846fda361d02980507b861972"
+
+      def install
+        bin.install "digaws"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sampointer/digaws/releases/download/v1.0.2/digaws_1.0.2_Linux_arm64.tar.gz"
-      sha256 "150d649639376baa0e892ed07c629cbde9eecf3236ada67a9b58e0f6be49b306"
-    end
-  end
+      url "https://github.com/sampointer/digaws/releases/download/v1.0.3/digaws_1.0.3_Linux_arm64.tar.gz"
+      sha256 "057c4deddf6a3b38d735560fb5d1835e6016b939ae19f8515db4a24469c4097d"
 
-  def install
-    bin.install "digaws"
+      def install
+        bin.install "digaws"
+      end
+    end
   end
 end
